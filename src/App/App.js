@@ -6,9 +6,17 @@ export default class App extends Component {
 		super();
 
 		this.state = {
-			reservations: [],
+      reservations: [],
 		};
-	}
+  }
+  
+  componentDidMount = async () => {
+    const reservations = await fetch('http://localhost:3001/api/v1/reservations');
+    if (reservations.ok) {
+      const response = await reservations.json();
+      this.setState({ reservations: response });
+    }
+  }
 
 	render() {
     const { reservations } = this.state;
