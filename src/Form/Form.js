@@ -36,7 +36,7 @@ export default class Form extends Component {
 
 	render() {
 		return (
-			<form class='form'>
+			<form className='form'>
 				<label htmlFor='name'></label>
 				<input
 					type='text'
