@@ -16,7 +16,16 @@ export default class Form extends Component {
 
   render() {
     return (
-      <h1>Form Component</h1>
+      <form class="form">
+        <label htmlFor='name'></label>
+        <input type='text' name='name' placeholder='Name' />
+        <label htmlFor='date'></label>
+        <input type='date' name='date' placeholder='Date' />
+        <label htmlFor='time'></label>
+        <input type='time' name='time' placeholder='Time' />
+        <label htmlFor='guests'></label>
+        <input type='number' name='guests' placeholder='Number of guests' />
+      </form>
     )
   }
 }
