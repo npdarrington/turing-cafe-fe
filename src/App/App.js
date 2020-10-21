@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Reservation from '../Reservation/Reservation';
+import Form from '../Form/Form';
 import './App.css';
 
 export default class App extends Component {
@@ -31,7 +32,9 @@ export default class App extends Component {
 		return (
 			<div className='App'>
 				<h1 className='app-title'>Turing Cafe Reservations</h1>
-				<div className='resy-form'></div>
+				<div className='resy-form'>
+          <Form />
+        </div>
 				<div className='resy-container'>
 					{reservations.length < 1 && (
 						<h2>There are no reservations currently</h2>
