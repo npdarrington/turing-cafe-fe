@@ -1,12 +1,13 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
-import { screen, render, waitFor } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 
 import Form from './Form';
 
 describe('Form', () => {
   it('Should allow a user to record data into form inputs', () => {
-    render(<Form />);
+    const mockReservation = jest.fn();
+    render(<Form addNewReservation={mockReservation} />);
     const name = screen.getByPlaceholderText('Name')
     const date = screen.getByPlaceholderText('Date M/D')
     const time = screen.getByPlaceholderText('Time H:MM')
@@ -19,9 +20,5 @@ describe('Form', () => {
     expect(date.value).toBe('10/22');
     expect(time.value).toBe('3:30');
     expect(guests.value).toBe('4');
-  });
-
-  it('Should allow the user to add a new reservation', () => {
-
   });
 })
