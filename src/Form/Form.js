@@ -3,21 +3,21 @@ import React, { Component } from 'react';
 import './Form.css';
 
 export default class Form extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			name: '',
 			date: '',
 			time: '',
-			guests: '',
+			number: '',
 		};
 	}
 
 	updateHandler = event => {
 		const { name, value } = event.target;
-		this.setState({ [name]: value });
-	};
+    this.setState({ [name]: value });
+  };
 
 	render() {
 		return (
@@ -32,24 +32,24 @@ export default class Form extends Component {
 				/>
 				<label htmlFor='date'></label>
 				<input
-					type='date'
+					type='text'
 					name='date'
-					placeholder='Date'
+					placeholder='Date M/D'
 					value={this.state.date}
 					onChange={this.updateHandler}
 				/>
 				<label htmlFor='time'></label>
 				<input
-					type='time'
+					type='text'
 					name='time'
-					placeholder='Time'
+					placeholder='Time H:MM'
 					value={this.state.time}
 					onChange={this.updateHandler}
 				/>
-				<label htmlFor='guests'></label>
+				<label htmlFor='number'></label>
 				<input
 					type='number'
-					name='guests'
+					name='number'
 					placeholder='Number of guests'
 					value={this.state.guests}
 					onChange={this.updateHandler}
