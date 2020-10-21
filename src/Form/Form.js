@@ -66,7 +66,7 @@ export default class Form extends Component {
 					type='number'
 					name='number'
 					placeholder='Number of guests'
-					value={this.state.guests}
+					value={this.state.number}
 					onChange={this.updateHandler}
 				/>
         <button className='submit-btn' type='button' onClick={this.submitReservation}>Make Reservation</button>
