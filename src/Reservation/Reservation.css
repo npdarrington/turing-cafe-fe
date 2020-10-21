@@ -1,0 +1,36 @@
+:root {
+  --teal-color: #008080;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+  width: 20rem;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: white;
+  border: 3px solid var(--teal-color);
+  border-radius: .5rem;
+  color: var(--teal-color);
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: var(--teal-color);
+  border: none;
+  color: white;
+  height: 2.5rem;
+}
