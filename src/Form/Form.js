@@ -19,6 +19,21 @@ export default class Form extends Component {
     this.setState({ [name]: value });
   };
 
+  submitReservation = () => {
+    const reservation = this.state;
+    this.props.addNewReservation(reservation);
+    this.clearInputs();
+  }
+  
+  clearInputs = () => {
+    this.setState({
+      name: '',
+      date: '',
+      time: '',
+      number: ''
+    })
+  }
+
 	render() {
 		return (
 			<form class='form'>
@@ -54,7 +69,7 @@ export default class Form extends Component {
 					value={this.state.guests}
 					onChange={this.updateHandler}
 				/>
-        <button className='submit-btn' type='button'>Make Reservation</button>
+        <button className='submit-btn' type='button' onClick={this.submitReservation}>Make Reservation</button>
 			</form>
 		);
 	}
