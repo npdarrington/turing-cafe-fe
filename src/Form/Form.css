@@ -1,0 +1,18 @@
+form {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  margin: 0 2rem;
+  width: 15rem;
+  height: 2rem;
+  padding-left: .5rem;
+}
+
+.submit-btn {
+  width: 15rem;
+  text-align: center;
+  border: none;
+  height: 2.7rem;
+}
