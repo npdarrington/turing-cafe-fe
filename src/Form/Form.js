@@ -54,6 +54,7 @@ export default class Form extends Component {
 					value={this.state.guests}
 					onChange={this.updateHandler}
 				/>
+        <button className='submit-btn' type='button'>Make Reservation</button>
 			</form>
 		);
 	}
