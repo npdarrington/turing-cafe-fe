@@ -29,7 +29,6 @@ export default class App extends Component {
   
   addNewReservation = async (reservation) => {
     const { name, date, time, number } = reservation;
-    console.log(reservation);
     const data = {
       name,
       date,
