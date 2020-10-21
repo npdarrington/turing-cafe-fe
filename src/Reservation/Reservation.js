@@ -9,7 +9,7 @@ const Reservation = ({ reservation }) => {
 			<p className='reservation-date'>{reservation.date}</p>
 			<p className='reservation-time'>{reservation.time} PM</p>
 			<h4 className='reservation-guests'>
-				Numbers of guests: {reservation.number}
+				Number of guests: {reservation.number}
 			</h4>
 			<button type='button' name='cancel-reservation'>
 				Cancel
