@@ -16,3 +16,8 @@ input {
   border: none;
   height: 2.7rem;
 }
+
+.form-error {
+  color: red;
+  font-size: 3rem;
+}
