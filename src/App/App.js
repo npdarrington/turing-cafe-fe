@@ -25,7 +25,19 @@ export default class App extends Component {
 				error: 'We were not able to get the reservations. Refresh to try again',
 			});
 		}
-	};
+  };
+  
+  addNewReservation = async (reservation) => {
+    const { name, date, time, number } = reservation;
+    console.log(reservation);
+    const data = {
+      name,
+      date,
+      time,
+      number
+    }
+    this.setState({ reservations: [...this.state.reservations, data] });
+  }
 
 	render() {
 		const { reservations, error } = this.state;
@@ -33,7 +45,7 @@ export default class App extends Component {
 			<div className='App'>
 				<h1 className='app-title'>Turing Cafe Reservations</h1>
 				<div className='resy-form'>
-          <Form />
+          <Form addNewReservation={this.addNewReservation} />
         </div>
 				<div className='resy-container'>
 					{reservations.length < 1 && (
